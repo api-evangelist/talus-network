@@ -1,8 +1,28 @@
 aid: talus-network
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/talus-network.png
 name: Talus Network
-description: 'Talus Network is a company surfaced as a portfolio company of polychain and added to the
-  API Evangelist network as a stub for enrichment. Sector: ai-blockchain. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Talus Network is a decentralized Layer 1 platform for building and running
+  autonomous, verifiable AI agents fully on-chain. Its core product, Nexus, is an
+  agentic workflow engine that lets developers compose agents as directed acyclic
+  graphs (DAGs) of reusable Tools — LLM calls, HTTP requests, storage, exchanges —
+  executed and settled on-chain. Talus is built on Sui Move smart contracts with a
+  Cosmos SDK / CometBFT Protochain node, and ships a developer surface as Rust crates
+  (nexus-sdk, nexus-cli, nexus-toolkit), a Homebrew/AUR CLI, GitBook developer docs,
+  and on-chain Move module API references. Backed by Polychain, Talus positions itself
+  as infrastructure for the autonomous digital economy. There is no traditional REST /
+  OpenAPI HTTP API; the platform is consumed through the SDK, CLI, and Move contracts.
 url: https://raw.githubusercontent.com/api-evangelist/talus-network/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +32,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Ai Blockchain
+- AI Agents
+- Blockchain
+- Web3
+- Developer Tools
+- SDK
+- Rust
+- Workflow Automation
+- Sui Move
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +53,33 @@ maintainers:
 common:
 - type: Website
   url: https://talus.network
+- type: DeveloperPortal
+  url: https://docs.talus.network
+- type: Documentation
+  url: https://docs.talus.network
+- type: APIReference
+  name: Nexus Core API docs (Move modules)
+  url: https://docs.talus.network/developer-docs/index/nexus-core-api-docs.md
+- type: GettingStarted
+  url: https://docs.talus.network/getting-started/setup.md
+- type: Blog
+  url: https://blog.talus.network
+- type: GitHubOrganization
+  url: https://github.com/Talus-Network
+- type: Packages
+  url: packages/talus-network-packages.yml
+- type: SDKs
+  name: Nexus SDK (Rust)
+  url: packages/talus-network-packages.yml
+- type: CLI
+  name: Nexus CLI
+  url: cli/talus-network-cli.yml
+- type: LLMsTxt
+  url: llms/talus-network-llms.txt
+- type: DomainSecurity
+  url: security/talus-network-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1

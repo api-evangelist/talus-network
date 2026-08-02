@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/Talus-Network/nexus-sdk (README) + https://docs.talus.network/developer-docs/index-1/cli.md
+name: nexus-cli
+binary: nexus
+summary: >-
+  The Nexus CLI is the first-party command-line interface for building, validating,
+  deploying, and executing Nexus agentic workflows (DAGs) on the Talus Network, plus
+  managing tools, gas budgets, the on-chain scheduler, and network configuration. The
+  binary is catalogued in packages/talus-network-packages.yml.
+install:
+  - method: homebrew
+    commands:
+      - brew tap talus-network/tap
+      - brew install nexus-cli
+  - method: aur
+    commands:
+      - yay -S nexus-cli
+  - method: cargo-binstall
+    commands:
+      - cargo binstall --git https://github.com/talus-network/nexus-sdk nexus-cli
+  - method: cargo
+    commands:
+      - cargo install nexus-cli --git https://github.com/talus-network/nexus-sdk --tag v2.0.0-rc.4 --locked
+command_groups:
+  - name: tool
+    description: Register, list, and manage Nexus Tools available to workflows.
+  - name: conf
+    description: Manage CLI configuration (network, keys, endpoints).
+  - name: dag
+    description: Validate and execute workflow DAGs.
+  - name: scheduler
+    description: Manage on-chain scheduler tasks.
+  - name: gas
+    description: Manage gas budgets for workflow execution.
+  - name: network
+    description: Network administration commands.
+  - name: completion
+    description: Generate shell completions.
+key_flows:
+  - Build and validate a workflow DAG, then deploy and execute it on-chain.
+  - Register a custom Nexus Tool so a DAG can call it.
+  - Configure a gas budget so an agent workflow can pay for on-chain execution.

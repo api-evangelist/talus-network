@@ -1,0 +1,11 @@
+{
+  "repo": "talus-network",
+  "feeds": [
+    {
+      "source": "https://docs.talus.network/getting-started/setup.md",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-01T15:49:00Z"
+}

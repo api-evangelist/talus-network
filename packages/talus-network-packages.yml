@@ -1,0 +1,53 @@
+generated: '2026-07-21'
+method: searched
+source: https://crates.io + https://github.com/Talus-Network/nexus-sdk
+notes: >-
+  Talus Network publishes its developer surface as Rust crates (the Nexus SDK,
+  CLI, and Tool-building toolkit) plus a Homebrew tap and an AUR package for the
+  nexus-cli binary. No npm, PyPI, Maven, NuGet, RubyGems, Packagist, or Go module
+  first-party client libraries were found. All crates are owned by the
+  Talus-Network GitHub org (repository github.com/Talus-Network/nexus-sdk), so
+  they are first-party / official.
+packages:
+  - language: rust
+    registry: crates.io
+    name: nexus-sdk
+    url: https://crates.io/crates/nexus-sdk
+    install: cargo add nexus-sdk
+    description: Nexus SDK provides a set of tools to interact with the Nexus Workflow.
+    repository: https://github.com/Talus-Network/nexus-sdk
+    official: true
+  - language: rust
+    registry: crates.io
+    name: nexus-cli
+    url: https://crates.io/crates/nexus-cli
+    install: cargo install nexus-cli --git https://github.com/talus-network/nexus-sdk --locked
+    description: Nexus CLI provides an interface to interact with the Nexus Workflow.
+    repository: https://github.com/Talus-Network/nexus-sdk
+    official: true
+  - language: rust
+    registry: crates.io
+    name: nexus-toolkit
+    url: https://crates.io/crates/nexus-toolkit
+    install: cargo add nexus-toolkit
+    description: Nexus Toolkit provides a Rust framework to create new Nexus Tools.
+    repository: https://github.com/Talus-Network/nexus-sdk
+    official: true
+  - language: rust
+    registry: homebrew
+    name: nexus-cli
+    url: https://github.com/Talus-Network/homebrew-tap
+    install: |-
+      brew tap talus-network/tap
+      brew install nexus-cli
+    description: Homebrew tap distribution of the nexus-cli binary (macOS/Linux).
+    repository: https://github.com/Talus-Network/homebrew-tap
+    official: true
+  - language: rust
+    registry: aur
+    name: nexus-cli
+    url: https://aur.archlinux.org/packages/nexus-cli
+    install: yay -S nexus-cli
+    description: Arch Linux (AUR) distribution of the nexus-cli binary.
+    repository: https://github.com/Talus-Network/nexus-sdk
+    official: true
